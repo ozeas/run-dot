@@ -31,14 +31,14 @@ Hints:
 
 * Make a fork of this repository on Github. If you aren't comfortable with
    creating a public fork of this project, make a private repository
-   (bitbucket offers free private repos) and add developer permission for the
+   (gitlab offers free private repos) and add developer permission for the
    user [@tech-hiring](https://gitlab.com/tech-hiring) on project;
 * Follow the instructions on README.md (this file);
 * Deploy your project on a host service (we recommend
    [Heroku](https://heroku.com) or [Netlify](http://netlify.com/));
 * Apply for the position at our [career page](https://www.99jobs.com/olist)
    with:
-   * Link to the fork on Github (or bitbucket.org);
+   * Link to the fork on Github (or gitlab.com);
    * Link to the project in the deployed host service.
 
 

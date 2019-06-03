@@ -1,6 +1,6 @@
 ![Logo of the project](./images/logo.sample.png)
 
-# Name of the project &middot; 
+# work-at-olist-front
 [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm)  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ozeas/work-at-olist-front/blob/master/LICENSE)
 
 Project develop for application at the vacancy of frontend developer at olist company.
@@ -20,8 +20,13 @@ $ npm run start
 
 ### Built With
 This project was developed with:
-1. HTML5/CSS
+1. HTML5/CSS3
 1. JavaScript ES6
+
+Others:
+1. Webpack ^7.4.5
+1. karma ^3.0.0
+1. Jasmine ^3.2.0
 
 ### Prerequisites
 
@@ -60,6 +65,7 @@ $ npm run start
 	heroku  https://git.heroku.com/thawing-inlet-61413.git (fetch)
 	heroku  https://git.heroku.com/thawing-inlet-61413.git (push)
 $ heroku git:remote -a thawing-inlet-61413
+$ heroku config:set NPM_CONFIG_PRODUCTION=false
 $ git push heroku master
 	Initializing repository, done.
 	updating 'refs/heads/master'
@@ -67,6 +73,11 @@ $ git push heroku master
  ```
 
 The before steps should create a new repository on herokuapp and deploy and publish this project online in your account herokup.
+
+## Demo
+
+The demonstration of this project can be seen at [herokuapp.](https://work-olist-frontend.herokuapp.com "herokuapp.")
+
 
 ## Tests
 

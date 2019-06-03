@@ -1,19 +1,19 @@
 /* eslint-disable */
 
-import './SingUpPage';
+import './SignUpPage';
 
-describe('singup-page component', () => {
+describe('signup-page component', () => {
   let element, shadowRoot;
 
   beforeEach(() => {
-    element = document.createElement('singup-page');
+    element = document.createElement('signup-page');
     element.setAttribute('style', 'display: none;');
     shadowRoot = element.shadowRoot;
     document.body.append(element);
   });
 
   it('should mount componenent', () => {
-    expect(shadowRoot.querySelector('.singup-page')).toBeTruthy();
+    expect(shadowRoot.querySelector('.signup-page')).toBeTruthy();
   });
 
   it('should has submit button disabled with invalid form', (done) => {

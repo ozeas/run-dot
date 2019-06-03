@@ -1,9 +1,9 @@
-const tagName = 'singup-page';
+const tagName = 'signup-page';
 const template = document.createElement('template');
 
 const styled = `
     <style>
-      .singup-page {
+      .signup-page {
         min-width: 515px;
         width: 515px;
         padding: 60px 70px 48px 70px;
@@ -14,7 +14,7 @@ const styled = `
       }
 
       @media (min-width: 320px) and (max-width: 480px) {
-        .singup-page {
+        .signup-page {
           width: 330px;
           min-width: 100%;
           padding: 10px;
@@ -22,28 +22,28 @@ const styled = `
       }
 
       @media (min-width: 375px) {
-        .singup-page {
+        .signup-page {
           width: 360px;
         }
       }
 
-      .singup-page__title {
+      .signup-page__title {
         margin-bottom: 26px;
       }
-      .singup-page__title h2 {
+      .signup-page__title h2 {
         font-size: 22px;
         text-align: center;
         color: #312F4F;
         font-weight: normal;
       }
-      .singup-page__input {
+      .signup-page__input {
         text-align: left;
         margin-bottom: 19px;
       }
-      .singup-page__input--last {
+      .signup-page__input--last {
         margin-bottom: 32px;
       }
-      .singup-page__input--password {
+      .signup-page__input--password {
         margin-bottom: 8px;
       }
 
@@ -61,8 +61,8 @@ const styled = `
   `;
 template.innerHTML = `
     ${styled}
-    <div class="singup-page">
-      <div class="singup-page__logotype">
+    <div class="signup-page">
+      <div class="signup-page__logotype">
         <ui-logo-type></ui-logo-type>
       </div>
       <div class="message-success">
@@ -71,18 +71,18 @@ template.innerHTML = `
           message="Verifique sua caixa de entrada para confirmar seu email">
         </ui-success-message>
       </div>
-      <form name="form-singup-page">
-        <div class="singup-page__title">
+      <form name="form-signup-page">
+        <div class="signup-page__title">
           <h2>Crie sua conta</h2>
         </div>
-        <div class="singup-page__input">
+        <div class="signup-page__input">
           <ui-input
             title="Nome completo"
             id="full-name"
             name="fullname"
             required></ui-input>
         </div>
-        <div class="singup-page__input">
+        <div class="signup-page__input">
           <ui-input
             title="E-mail"
             id="e-mail"
@@ -90,7 +90,7 @@ template.innerHTML = `
             type="email"
             required></ui-input>
         </div>
-        <div class="singup-page__input singup-page__input--password">
+        <div class="signup-page__input signup-page__input--password">
           <ui-input
             title="Senha"
             id="password"
@@ -98,10 +98,10 @@ template.innerHTML = `
             name="password"
             required></ui-input>
         </div>
-        <div class="singup-page__passwordstrength">
+        <div class="signup-page__passwordstrength">
           <ui-password-strength></ui-password-strength>
         </div>
-        <div class="singup-page__input singup-page__input--last">
+        <div class="signup-page__input signup-page__input--last">
           <ui-input
             title="Confirme sua senha"
             id="confirm-password"
@@ -110,7 +110,7 @@ template.innerHTML = `
             required></ui-input>
           <span class="log-message-passowrdconfig"></span>
         </div>
-        <div class="sinup-page__button">
+        <div class="siunp-page__button">
           <ui-button
             name="btn-save"
             type="submit"
@@ -120,7 +120,7 @@ template.innerHTML = `
       </form>
     </div>
   `;
-class SingUpPage extends HTMLElement {
+class SignUpPage extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -357,4 +357,4 @@ class SingUpPage extends HTMLElement {
     return approvedList;
   }
 }
-window.customElements.define(tagName, SingUpPage);
+window.customElements.define(tagName, SignUpPage);

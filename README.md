@@ -1,5 +1,3 @@
-![Logo of the project](./images/logo.sample.png)
-
 # work-at-olist-front
 [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm)  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ozeas/work-at-olist-front/blob/master/LICENSE)
 

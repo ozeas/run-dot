@@ -63,7 +63,7 @@ $ npm run start
 	heroku  https://git.heroku.com/thawing-inlet-61413.git (fetch)
 	heroku  https://git.heroku.com/thawing-inlet-61413.git (push)
 $ heroku git:remote -a thawing-inlet-61413
-$ heroku config:set NPM_CONFIG_PRODUCTION=false
+$ heroku config:set NPM_CONFIG_PRODUCTION=true
 $ git push heroku master
 	Initializing repository, done.
 	updating 'refs/heads/master'

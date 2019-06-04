@@ -157,6 +157,7 @@ class SignUpPage extends HTMLElement {
   }
 
   _checkValidationSubmit() {
+    this._isInvalidConfirmPassword();
     const isValid = Object.keys(this.data).find(field => this.data[field].isValid !== true);
     if (isValid) {
       this.submitButton.setAttribute('disabled', true);
@@ -267,16 +268,22 @@ class SignUpPage extends HTMLElement {
     const confirmPasswordInput = this.confirmPassword;
     const logMessage = this.logMessageConfirmPassword;
 
+    if (!passwordInput.input.value && !confirmPasswordInput.input.value) {
+      return false;
+    }
+
     if (passwordInput.input.value !== confirmPasswordInput.input.value) {
       logMessage.innerHTML = 'As senhas devem ser iguais';
       this.data[confirmPasswordInput.input.name].isValid = false;
       confirmPasswordInput.input.classList.remove('valid');
       confirmPasswordInput.input.classList.add('error');
-      this._checkValidationSubmit();
       return true;
     }
-
     passwordInput.input.classList.remove('error');
+    passwordInput.input.classList.add('valid');
+    confirmPasswordInput.input.classList.remove('error');
+    confirmPasswordInput.input.classList.add('valid');
+
     logMessage.innerHTML = '';
     this.data[confirmPasswordInput.input.name].isValid = true;
     return false;
@@ -354,6 +361,7 @@ class SignUpPage extends HTMLElement {
     this.passwordElement.setAttribute('error', false);
     this.passwordElement.input.classList.add('valid');
     this._handleValidationProgress(approvedList);
+    this._isInvalidConfirmPassword();
     return approvedList;
   }
 }

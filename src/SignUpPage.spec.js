@@ -121,6 +121,6 @@ describe('signup-page component', () => {
   });
 
   afterEach(() => {
-    document.body.removeChild(element);
+    // document.body.removeChild(element);
   });
 });

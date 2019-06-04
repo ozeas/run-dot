@@ -63,7 +63,7 @@ template.innerHTML = `
     ${styled}
     <div class="signup-page">
       <div class="signup-page__logotype">
-        <ui-logo-type></ui-logo-type>
+        <!--<ui-logo-type></ui-logo-type>-->
       </div>
       <div class="message-success">
         <ui-success-message
@@ -279,8 +279,6 @@ class SignUpPage extends HTMLElement {
       confirmPasswordInput.input.classList.add('error');
       return true;
     }
-    passwordInput.input.classList.remove('error');
-    passwordInput.input.classList.add('valid');
     confirmPasswordInput.input.classList.remove('error');
     confirmPasswordInput.input.classList.add('valid');
 
@@ -359,7 +357,14 @@ class SignUpPage extends HTMLElement {
     }
     this.data[this.passwordElement.input.name].isValid = true;
     this.passwordElement.setAttribute('error', false);
-    this.passwordElement.input.classList.add('valid');
+
+    this.passwordElement.input.classList.remove('valid');
+    this.passwordElement.input.classList.add('error');
+    if (approvedList.length === 3) {
+      this.passwordElement.input.classList.remove('error');
+      this.passwordElement.input.classList.add('valid');
+      this.data[this.passwordElement.input.name].isValid = false;
+    }
     this._handleValidationProgress(approvedList);
     this._isInvalidConfirmPassword();
     return approvedList;

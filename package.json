@@ -36,7 +36,6 @@
     "test": "karma start config/karma.conf.js"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.10",
     "http-server": "^0.11.1"
   }
 }

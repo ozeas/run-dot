@@ -63,7 +63,7 @@ template.innerHTML = `
     ${styled}
     <div class="signup-page">
       <div class="signup-page__logotype">
-        <!--<ui-logo-type></ui-logo-type>-->
+        <ui-logo-type></ui-logo-type>
       </div>
       <div class="message-success">
         <ui-success-message

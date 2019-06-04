@@ -90,6 +90,26 @@ $ npm run test
 ## Style guide
 This project follows the rules of the clean code. Applying the [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base "Airbnb") style guide with [Eslint](https://eslint.org/docs/user-guide/getting-started "Eslint") to monitor the pattern code.
 
+## Work environment
+1. Computer
+	Operation system: macOS Mojave (version 10.14.5)
+	MacBook Pro (Retina, 13-inch, Late 2013)
+	Processor Intel Core i5 2.4 GHz
+	Ram memory 8 GB 1600 MHz DDR3
+
+2. Programming IDE
+	 Visual Studio Code (version 1.34.0)
+
+3. Libraries
+	Webpack
+	Babel
+	Eslint
+	Karma
+	Jasmine
+	None
+	Yarn
+	Heroku
+
 ## Licensing
 
 Project available under MIT license

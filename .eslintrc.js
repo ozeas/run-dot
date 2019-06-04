@@ -14,6 +14,7 @@ module.exports = {
   },
   rules: {
     "no-underscore-dangle": 0,
-    "default-case": 0
+    "default-case": 0,
+    "linebreak-style": 0
   },
 };

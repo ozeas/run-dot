@@ -3,7 +3,7 @@ const template = document.createElement('template');
 
 const styled = `
     <style>
-      .signup-page {
+      .signup-page__container {
         min-width: 515px;
         width: 515px;
         padding: 60px 70px 48px 70px;
@@ -14,7 +14,7 @@ const styled = `
       }
 
       @media (min-width: 320px) and (max-width: 480px) {
-        .signup-page {
+        .signup-page__container {
           width: 330px;
           min-width: 100%;
           padding: 10px;
@@ -22,7 +22,7 @@ const styled = `
       }
 
       @media (min-width: 375px) {
-        .signup-page {
+        .signup-page__container {
           width: 360px;
         }
       }
@@ -61,7 +61,7 @@ const styled = `
   `;
 template.innerHTML = `
     ${styled}
-    <div class="signup-page">
+    <div class="signup-page__container">
       <div class="signup-page__logotype">
         <ui-logo-type></ui-logo-type>
       </div>
@@ -212,7 +212,8 @@ class SignUpPage extends HTMLElement {
           this._submitForm();
         }
       });
-      this.submitButton.addEventListener('click', () => {
+      this.submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
         this._submitForm();
       });
       this._checkValidationSubmit();

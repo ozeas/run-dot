@@ -16,7 +16,7 @@ describe('ui-success-message component', () => {
   });
 
   it('should mount component', () => {
-    expect(shadowRoot.querySelector('.ui-success-message')).toBeTruthy();
+    expect(shadowRoot.querySelector('.ui-success-message__container')).toBeTruthy();
   });
 
   it('should reiceve a attribute title', (done) => {

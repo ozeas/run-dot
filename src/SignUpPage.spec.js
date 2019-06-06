@@ -13,7 +13,7 @@ describe('signup-page component', () => {
   });
 
   it('should mount componenent', () => {
-    expect(shadowRoot.querySelector('.signup-page')).toBeTruthy();
+    expect(shadowRoot.querySelector('.signup-page__container')).toBeTruthy();
   });
 
   it('should has submit button disabled with invalid form', (done) => {

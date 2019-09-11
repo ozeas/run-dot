@@ -30,12 +30,12 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "start": "http-server ./dist",
-    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "karma start config/karma.conf.js"
   },
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "vis-network": "^6.0.0"
   }
 }

@@ -1,16 +1,34 @@
-import './styles.css';
+import vis from 'vis-network';
 
-/**
- * import ui webcomponents
- */
-import './ui/ui-input/ui-input';
-import './ui/ui-button/ui-button';
-import './ui/ui-password-strength/ui-password-strength';
-import './ui/ui-logo-type/ui-logo-type';
-import './ui/ui-success-message/ui-success-message';
-import './ui/ui-spinner/ui-spinner';
+import './style.css';
 
-/**
- * import scenes pages
- */
-import './SignUpPage';
+function runDot(DOTstring) {
+  const parsedData = vis.network.convertDot(DOTstring);
+  const data = {
+    nodes: parsedData.nodes,
+    edges: parsedData.edges,
+  };
+
+  const { options } = parsedData;
+  // you can extend the options like a normal JSON constiable:
+  options.nodes = {
+    color: 'red',
+  };
+
+  const container = document.getElementById('container');
+  // create a network
+  // eslint-disable-next-line no-unused-vars
+  const network = new vis.Network(container, data, options);
+}
+
+// eslint-disable-next-line no-unused-vars
+function addDot() {
+  const codeDot = prompt('Cole o código DOT');
+  runDot(codeDot);
+}
+
+const DOTstring = 'dinetwork {1 -> 1 -> 2; 2 -> 3; 2 -- 4; 2 -> 1 }';
+runDot(DOTstring);
+
+global.addDot = addDot;
+// provide data in the DOT language

@@ -24,7 +24,9 @@ function runDot(DOTstring) {
 // eslint-disable-next-line no-unused-vars
 function addDot() {
   const codeDot = prompt('Cole o código DOT');
-  runDot(codeDot);
+  if (codeDot) {
+    runDot(codeDot);
+  }
 }
 
 const DOTstring = 'dinetwork {1 -> 1 -> 2; 2 -> 3; 2 -- 4; 2 -> 1 }';
